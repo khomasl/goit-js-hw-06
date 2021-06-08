@@ -1,20 +1,11 @@
-// Дополни код присвоив объявленным переменным выражения обращения к соответствующим свойствам обьекта apartment используя синтаксис «квадратных скобок».
+// Выполни рефакторинг функции calculateTotalPrice() так, чтобы она использовала неявный возврат.
 
-// aptRating - рейтинг;
-// aptDescr - описание;
-// aptPrice - цена;
-// aptTags - теги.
-const apartment = {
-    imgUrl: "https://via.placeholder.com/640x480",
-    descr: "Spacious apartment in the city center",
-    rating: 4,
-    price: 2153,
-    tags: ["premium", "promoted", "top"],
-  };
-  
-  // Change code below this line
-  const aptRating = apartment["rating"];
-  const aptDescr = apartment["descr"];
-  const aptPrice = apartment["price"];
-  const aptTags = apartment["tags"];
-  // Change code above this line
+// // Пиши код ниже этой строки
+// const calculateTotalPrice = (quantity, pricePerItem) => {
+//   return quantity * pricePerItem;
+// };
+// // Пиши код выше этой строки
+
+// Пиши код ниже этой строки
+const calculateTotalPrice = (quantity, pricePerItem) => quantity * pricePerItem;
+// Пиши код выше этой строки

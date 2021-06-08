@@ -1,19 +1,24 @@
-// Выполни рефакторинг решения предыдущего задания добавив в цикл for...in проверку на собственное свойство.
-const keys = [];
-const values = [];
-const advert = {
-  service: "apt",
-};
-const apartment = Object.create(advert);
-apartment.descr = "Spacious apartment in the city center";
-apartment.rating = 4;
-apartment.price = 2153;
+// Метод map() и массив объектов
+// Используя метод map() сделай так, чтобы в переменной titles получился массив названий книг (свойство title) из всех объектов массива books.
 
-for (const key in apartment) {
-  // Change code below this line
-  if (apartment.hasOwnProperty(key)) {
-    keys.push(key);
-    values.push(apartment[key]);
-  }
-  // Change code above this line
-}
+// const books = [
+//   { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+//   { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+//   { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+//   { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+//   { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
+// ];
+// // Пиши код ниже этой строки
+
+// const titles = books;
+
+const books = [
+  { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+  { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+  { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+  { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+  { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
+];
+// Пиши код ниже этой строки
+
+const titles = books.map(element => element.title);

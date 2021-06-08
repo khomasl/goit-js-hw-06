@@ -1,15 +1,35 @@
-// Перебери массив объектов colors используя цикл for...of. Добавь в массив hexColors значения свойств hex, а в массив rgbColors значения свойств rgb из всех объектов массива colors.
-const colors = [
-  { hex: '#f44336', rgb: '244,67,54' },
-  { hex: '#2196f3', rgb: '33,150,243' },
-  { hex: '#4caf50', rgb: '76,175,80' },
-  { hex: '#ffeb3b', rgb: '255,235,59' },
+// Метод filter() и массив объектов
+// Используя метод filter() дополни код так, чтобы:
+
+// В переменной topRatedBooks получился массив книг рейтинг которых (свойство rating) больше либо равно значению переменной MIN_RATING.
+// В переменной booksByAuthor получился массив книг написанных автором с именем (свойство author) которое совпадает со значением в переменной AUTHOR.
+
+// const books = [
+//   { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+//   { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+//   { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+//   { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+//   { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
+// ];
+
+// const MIN_RATING = 8;
+// const AUTHOR = 'Бернард Корнуэлл';
+// // Пиши код ниже этой строки
+
+// const topRatedBooks = books;
+// const booksByAuthor = books;
+
+const books = [
+  { title: 'Последнее королевство', author: 'Бернард Корнуэлл', rating: 8.38 },
+  { title: 'На берегу спокойных вод', author: 'Роберт Шекли', rating: 8.51 },
+  { title: 'Сон смешного человека', author: 'Федор Достоевский', rating: 7.75 },
+  { title: 'Красна как кровь', author: 'Ли Танит', rating: 7.94 },
+  { title: 'Враг Божий', author: 'Бернард Корнуэлл', rating: 8.67 }
 ];
 
-const hexColors = [];
-const rgbColors = [];
-// Change code below this line
-for (const color of colors){
-  hexColors.push(color.hex);
-  rgbColors.push(color.rgb);
-}
+const MIN_RATING = 8;
+const AUTHOR = 'Бернард Корнуэлл';
+// Пиши код ниже этой строки
+
+const topRatedBooks = books.filter(book => book.rating >= MIN_RATING);
+const booksByAuthor = books.filter(book => book.author === AUTHOR);

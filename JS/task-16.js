@@ -1,11 +1,44 @@
-// Напиши функцию countTotalSalary(salaries) которая принимает объект зарплат, где имя свойства это имя сотрудника, а значение свойства это зарплата. Функция должна рассчитать общую сумму зарплат сотрудников и вернуть её. Используй переменную totalSalary для хранения общей суммы зарплаты.
-function countTotalSalary(salaries) {
-  let totalSalary = 0;
-  // Change code below this line
-  const arrSalaries = Object.values(salaries);
-  for (salary of arrSalaries){
-    totalSalary += salary;
+// Фильтрация уникальных элементов
+// Дополни код так, чтобы в переменной allGenres был массив всех жанров книг (свойство genres) из массива books, а в переменной uniqueGenres массив уникальных жанров - без повторений.
+
+// const books = [
+//   {
+//     title: 'Последнее королевство',
+//     author: 'Бернард Корнуэлл',
+//     genres: ['приключения', 'историческое']
+//   },
+//   {
+//     title: 'На берегу спокойных вод',
+//     author: 'Роберт Шекли',
+//     genres: ['фантастика', 'мистика']
+//   },
+//   {
+//     title: 'Красна как кровь',
+//     author: 'Ли Танит',
+//     genres: ['ужасы', 'мистика', 'приключения']
+//   }
+// ];
+// // Пиши код ниже этой строки
+// const allGenres = books;
+// const uniqueGenres = allGenres;
+
+const books = [
+  {
+    title: 'Последнее королевство',
+    author: 'Бернард Корнуэлл',
+    genres: ['приключения', 'историческое']
+  },
+  {
+    title: 'На берегу спокойных вод',
+    author: 'Роберт Шекли',
+    genres: ['фантастика', 'мистика']
+  },
+  {
+    title: 'Красна как кровь',
+    author: 'Ли Танит',
+    genres: ['ужасы', 'мистика', 'приключения']
   }
-  // Change code above this line
-  return totalSalary;
-}
+];
+// Пиши код ниже этой строки
+const allGenres = books.flatMap(book => book.genres);
+const uniqueGenres = allGenres.filter((book, index, books) => books.indexOf(book) === index);

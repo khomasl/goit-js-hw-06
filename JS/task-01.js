@@ -1,14 +1,28 @@
-// Присвой переменной apartment объект описывающий квартиру со следующими характеристиками:
+// Функция calculateTotalPrice(orderedItems) принимает один параметр orderedItems - массив чисел, и рассчитывает общую сумму его элементов, которая сохраняется в переменной totalPrice и возвращается как результат работы функции.
 
-// imgUrl - фотография, значение "https://via.placeholder.com/640x480";
-// descr - описание, значение "Spacious apartment in the city center";
-// rating - рейтинг, значение 4;
-// price - цена, значение 2153;
-// tags - метаинформация, массив ["premium", "promoted", "top"].
-const apartment = {
-  imgUrl: "https://via.placeholder.com/640x480",
-  descr: "Spacious apartment in the city center",
-  rating: 4,
-  price: 2153,
-  tags: ["premium", "promoted", "top"],
-};
+// Выполни рефакторинг функции так, чтобы вместо цикла for она использовала метод forEach.
+
+// Тесты
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   // Пиши код ниже этой строки
+
+//   for (let i = 0; i < orderedItems.length; i += 1) {
+//     totalPrice += orderedItems[i];
+//   }
+
+//   // Пиши код выше этой строки
+//   return totalPrice;
+// }
+
+function calculateTotalPrice(orderedItems) {
+  let totalPrice = 0;
+  // Пиши код ниже этой строки
+
+  orderedItems.forEach(function(item){
+    totalPrice += item;
+  });
+  // Пиши код выше этой строки
+  return totalPrice;
+}

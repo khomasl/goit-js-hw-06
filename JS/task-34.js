@@ -1,36 +1,28 @@
-// // Добавь объекту bookShelf ещё два метода, которые пока что будут возвращать просто строки по аналогии с getBooks() и addBook(bookName).
+// // Метод sort()
+// // Дополни код так, чтобы в переменной ascendingReleaseDates получилась отсортированная по возрастанию копия массива releaseDates, а в переменной alphabeticalAuthors копия массива имён авторов authors отсортированная в по алфавиту.
 
-// // Метод removeBook(bookName) будет удалять книгу по имени. Возвращает строку "Deleting book <имя книги>", где <имя книги> это значение параметра bookName.
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// const authors = [
+//   'Ли Танит',
+//   'Бернард Корнуэлл',
+//   'Роберт Шекли',
+//   'Федор Достоевский'
+// ];
+// // Пиши код ниже этой строки
 
-// // Метод updateBook(oldName, newName) будет обновлять название книги на новое. Возвращает строку "Updating book <старое имя> to <новое имя>", где <старое имя> и <новое имя>это значения параметров oldName и newName соотвественно.
+// const ascendingReleaseDates = releaseDates;
 
-// const bookShelf = {
-//     // Change code below this line
-//     books: ['The last kingdom', 'The guardian of dreams'],
-//     getBooks() {
-//       return 'Returning all books';
-//     },
-//     addBook(bookName) {
-//       return `Adding book ${bookName}`;
-//     },
-//     // Change code above this line
-//   };
-  
-const bookShelf = {
-    // Change code below this line
-    books: ['The last kingdom', 'The guardian of dreams'],
-    getBooks() {
-      return 'Returning all books';
-    },
-    addBook(bookName) {
-      return `Adding book ${bookName}`;
-    },
-    removeBook(bookName) {
-      return `Deleting book ${bookName}`;  
-    },
-    updateBook(oldName, newName){
-      return `Updating book ${oldName} to ${newName}`;
-    }
-    // Change code above this line
-  };
-  
+// const alphabeticalAuthors = authors;
+
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+const authors = [
+  'Ли Танит',
+  'Бернард Корнуэлл',
+  'Роберт Шекли',
+  'Федор Достоевский'
+];
+// Пиши код ниже этой строки
+
+const ascendingReleaseDates = [...releaseDates].sort();
+
+const alphabeticalAuthors = [...authors].sort();

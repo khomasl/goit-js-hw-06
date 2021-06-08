@@ -1,8 +1,28 @@
-// К нам обратилась владелица лавки зелий «У старой жабы» и заказала программу для ведения инвентаря - добавления, удаления, поиска и обновления зелий. Добавь объекту atTheOldToad свойство potions, значением которого сделай пустой массив.
+// // Свой порядок сортировки строк
+// // Онлайн бибилиотеке необходимо отображать книги отсортированные по автору, в алфавитном и обратном алфавитном порядке. Дополни код так, чтобы в переменной authorsInAlphabetOrder получилась отсортированная по алфавиту копия массива authors, а в переменной authorsInReversedOrder копия отсортированная в обратном алфавитном порядке.
 
-const atTheOldToad = {
-    // Change code below this line
-    potions: []
-    // Change code above this line
-  };
-  
+// const authors = [
+//   'Ли Танит',
+//   'Бернард Корнуэлл',
+//   'Роберт Шекли',
+//   'Федор Достоевский',
+//   'Говард Лавкрафт'
+// ];
+// // Пиши код ниже этой строки
+
+// const authorsInAlphabetOrder = authors;
+
+// const authorsInReversedOrder = authors;
+
+const authors = [
+  'Ли Танит',
+  'Бернард Корнуэлл',
+  'Роберт Шекли',
+  'Федор Достоевский',
+  'Говард Лавкрафт'
+];
+// Пиши код ниже этой строки
+
+const authorsInAlphabetOrder = [...authors].sort((a, b) => a.localeCompare(b));
+
+const authorsInReversedOrder = [...authors].sort((a, b) => b.localeCompare(a));

@@ -1,10 +1,8 @@
-// Дополни метод addPotion(potionName) так, чтобы он добавлял зелье potionName в конец массива зелий в свойстве potions.
-const atTheOldToad = {
-    potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
-    addPotion(potionName) {
-      // Change code below this line
-      this.potions.push(potionName)
-      // Change code above this line
-    },
-  };
-  
+// Задача. Сортировка по балансу
+// Дополни функцию sortByAscendingBalance(users) так, чтобы она возвращала массив пользователей отсортированный по возрастанию их баланса (свойство balance).
+
+// Пиши код ниже этой строки
+const sortByAscendingBalance = users => {
+   return [...users].sort((firstUser, secondUser) => firstUser.balance - secondUser.balance);
+};
+// Пиши код выше этой строки

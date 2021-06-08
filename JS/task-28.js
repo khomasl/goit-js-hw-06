@@ -1,21 +1,23 @@
-// В переменных firstGroupScores, secondGroupScores и thirdGroupScores хранятся результаты тестирования отдельных групп. Используя распыление дополни код так, чтобы:
+// Метод some()
+// Используя метод some() дополни код так, чтобы:
 
-// В переменной allScores хранился массив всех результатов от первой до третьей группы.
-// В переменной bestScore был самый высокий общий балл.
-// В переменной worstScore был самый низкий общий балл.
+// В переменной anyElementInFirstIsEven был результат проверки наличия чётных элементов в массиве firstArray.
+// В переменной anyElementInFirstIsOdd был результат проверки наличия нечётных элементов в массиве firstArray.
+// В переменной anyElementInSecondIsEven был результат проверки наличия чётных элементов в массиве secondArray.
+// В переменной anyElementInSecondIsOdd был результат проверки наличия нечётных элементов в массиве secondArray.
+// В переменной anyElementInThirdIsEven был результат проверки наличия чётных элементов в массиве thirdArray.
+// В переменной anyElementInThirdIsOdd был результат проверки наличия нечётных элементов в массиве thirdArray.
 
-// const firstGroupScores = [64, 42, 93];
-// const secondGroupScores = [89, 14, 51, 26];
-// const thirdGroupScores = [29, 47, 18, 97, 81];
-// // Change code below this line
-// const allScores = [];
-// const bestScore = allScores;
-// const worstScore = allScores;
+const firstArray = [26, 94, 36, 18];
+const secondArray = [17, 61, 23];
+const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// Пиши код ниже этой строки
 
-const firstGroupScores = [64, 42, 93];
-const secondGroupScores = [89, 14, 51, 26];
-const thirdGroupScores = [29, 47, 18, 97, 81];
-// Change code below this line
-const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
-const bestScore = Math.max(...allScores);
-const worstScore = Math.min(...allScores);
+const anyElementInFirstIsEven = firstArray.some(el => el % 2 === 0);
+const anyElementInFirstIsOdd = firstArray.some(el => el % 2 !== 0);
+
+const anyElementInSecondIsEven = secondArray.some(el => el % 2 === 0);
+const anyElementInSecondIsOdd = secondArray.some(el => el % 2 !== 0);
+
+const anyElementInThirdIsEven = thirdArray.some(el => el % 2 === 0);
+const anyElementInThirdIsOdd = thirdArray.some(el => el % 2 !== 0);

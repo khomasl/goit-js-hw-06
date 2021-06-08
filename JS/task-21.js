@@ -1,16 +1,15 @@
-// Пришел трёхдневный прогноз максимальных температур и мы считаем среднюю температуру за три дня (meanTemperature). Замени объявления переменных yesterday, today и tomorrow одной операцией деструктуризации свойств объекта highTemperatures.
-const highTemperatures = {
-  yesterday: 28,
-  today: 26,
-  tomorrow: 33,
+// Задача. Список друзей
+// Дополни функцию getFriends(users) так, чтобы она возвращала массив друзей всех пользователей (свойство friends). У нескольких пользователей могут быть одинаковые друзья, сделай так чтобы возвращаемый массив не содержал повторений.
+
+// Пиши код ниже этой строки
+// const getFriends = (users) => {
+   
+// };
+// Пиши код выше этой строки
+
+// Пиши код ниже этой строки
+const getFriends = (users) => {
+  const allFriends = users.flatMap(user => user.friends);
+  return allFriends.filter((user, index, users) => users.indexOf(user) === index);
 };
-// Change code below this line
-
-// const yesterday = highTemperatures.yesterday;
-// const today = highTemperatures.today;
-// const tomorrow = highTemperatures.tomorrow;
-
-const {yesterday, today, tomorrow} = highTemperatures;
-
-// Change code above this line
-const meanTemperature = (yesterday + today + tomorrow) / 3;
+// Пиши код выше этой строки

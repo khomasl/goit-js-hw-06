@@ -1,11 +1,9 @@
-// Дополни метод updatePotionName(oldName, newName) так, чтобы он обновлял название зелья с oldName на newName, в массиве зелий в свойстве potions.
-const atTheOldToad = {
-    potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
-    updatePotionName(oldName, newName) {
-      // Change code below this line
-      this.potions.splice(this.potions.indexOf(oldName), 1, newName);
-     
-      // Change code above this line
-    },
-  };
-  
+// Задача. Сортировка по имени
+// Дополни функцию sortByName(users) так, чтобы она возвращала массив пользователей отсортированный по их имени (свойство name) в алфавитном порядке.
+
+// Пиши код ниже этой строки
+const sortByName = users => {
+  return [...users].sort((firstUser, secondUser) => firstUser.name.localeCompare(secondUser.name));
+
+};
+// Пиши код выше этой строки

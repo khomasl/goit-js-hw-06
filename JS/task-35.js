@@ -1,23 +1,16 @@
-// // Дополни метод updateBook(oldName, newName) так, чтобы он изменял название книги с oldName на newName в свойстве books. Используй indexOf() для того, чтобы найти нужный элемент массива, и splice() для того чтобы заменить этот элемент
-// const bookShelf = {
-//     books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
-//     updateBook(oldName, newName) {
-//       // Change code below this line
-      
-      
-      
-//       // Change code above this line
-//     },
-//   };
+// // Свой порядок сортировки чисел
+// // Онлайн бибилиотеке необходимо отображать книги сортированные по дате издания, по её возрастанию или убыванию. Дополни код так, чтобы в переменной ascendingReleaseDates получилась отсортированная по возрастанию копия массива releaseDates, а в переменной descendingReleaseDates копия отсортированная по убыванию.
 
-const bookShelf = {
-    books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
-    updateBook(oldName, newName) {
-      // Change code below this line
-      //const bookIndex = this.books.indexOf(oldName);
-      //this.books.splice(bookIndex, 1, newName);
-      //
-      this.books.splice(this.books.indexOf(oldName), 1, newName);
-      // Change code above this line
-    },
-  };
+// const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// // Пиши код ниже этой строки
+
+// const ascendingReleaseDates = releaseDates;
+
+// const descendingReleaseDates = releaseDates;
+
+const releaseDates = [2016, 1967, 2008, 1984, 1973, 2012, 1997];
+// Пиши код ниже этой строки
+
+const ascendingReleaseDates = [...releaseDates].sort((a, b) => a - b);
+
+const descendingReleaseDates = [...releaseDates].sort((a, b) => b - a);

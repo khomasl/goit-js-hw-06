@@ -1,8 +1,6 @@
-// Задача. Общий баланс пользователей
+// Задача. Пользователи и друзья
+// Дополни функцию getNamesSortedByFriendCount(users) так, чтобы она возвращала массив имён пользователей отсортированный по возрастанию количества их друзей (свойство friends).
 
-// Дополни функцию calculateTotalBalance(users) так, чтобы она считала и возвращала сумму всех средств (свойство balance) которые хранят пользователи из массива users.
-
-// Пиши код ниже этой строки
 const users = [
   {
     name: 'Moore Hensley',
@@ -44,7 +42,7 @@ const users = [
     name: 'Carey Barr',
     email: 'careybarr@nurali.com',
     eyeColor: 'blue',
-    friends: ['Jordan Sampson', 'Eddie Strong'],
+    friends: ['Jordan Sampson', 'Eddie Strong', 'Adrian Cross'],
     isActive: true,
     balance: 3951,
     gender: 'male'
@@ -53,7 +51,7 @@ const users = [
     name: 'Blackburn Dotson',
     email: 'blackburndotson@furnigeer.com',
     eyeColor: 'brown',
-    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    friends: ['Jacklyn Lucas', 'Linda Chapman', 'Adrian Cross', 'Solomon Fokes'],
     isActive: false,
     balance: 1498,
     gender: 'male'
@@ -68,10 +66,10 @@ const users = [
     gender: 'female'
   }
 ]
-const calculateTotalBalance = users => {
-  return users.reduce((total, user) => {
-    return total + user.balance
-  }, 0);
-}
-// Пиши код выше этой строки
-console.log('object :>> ', calculateTotalBalance(users));
+// Пиши код ниже этой строки
+const getNamesSortedByFriendCount = users => {
+   return [...users]
+     .sort((firstUser, secondUser) => firstUser.friends.length - secondUser.friends.length)
+     .map((user) => user.name);
+     
+};

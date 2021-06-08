@@ -1,6 +1,5 @@
-// Задача. Общий баланс пользователей
-
-// Дополни функцию calculateTotalBalance(users) так, чтобы она считала и возвращала сумму всех средств (свойство balance) которые хранят пользователи из массива users.
+// Задача. Общий баланс
+// Дополни функцию getTotalBalanceByGender(users, gender) так, чтобы она возвращала общий баланс пользователей (свойство balance), пол которых (свойство gender) совпадает со значением параметра gender.
 
 // Пиши код ниже этой строки
 const users = [
@@ -44,7 +43,7 @@ const users = [
     name: 'Carey Barr',
     email: 'careybarr@nurali.com',
     eyeColor: 'blue',
-    friends: ['Jordan Sampson', 'Eddie Strong'],
+    friends: ['Jordan Sampson', 'Eddie Strong', 'Adrian Cross'],
     isActive: true,
     balance: 3951,
     gender: 'male'
@@ -53,7 +52,7 @@ const users = [
     name: 'Blackburn Dotson',
     email: 'blackburndotson@furnigeer.com',
     eyeColor: 'brown',
-    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    friends: ['Jacklyn Lucas', 'Linda Chapman', 'Adrian Cross', 'Solomon Fokes'],
     isActive: false,
     balance: 1498,
     gender: 'male'
@@ -68,10 +67,12 @@ const users = [
     gender: 'female'
   }
 ]
-const calculateTotalBalance = users => {
-  return users.reduce((total, user) => {
-    return total + user.balance
-  }, 0);
-}
+const getTotalBalanceByGender = (users, gender) => {
+  const usersGender = [...users].filter(user => user.gender === gender)
+
+  return usersGender.reduce((total, user) => {
+      return total + user.balance
+    }, 0);
+};
 // Пиши код выше этой строки
-console.log('object :>> ', calculateTotalBalance(users));
+console.log(' :>> ',getTotalBalanceByGender(users, 'male') );

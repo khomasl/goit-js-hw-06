@@ -1,34 +1,78 @@
-// Мы получили прогноз погоды на два дня, с минимальными и максимальными температурами, а также необязательными иконками. Замени объявления всех переменных одной операцией деструктуризации свойств объекта forecast. Задай значение по умолчанию для иконок, переменных todayIcon и tomorrowIcon - строку "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg".
-const forecast = {
-  today: {
-    low: 28,
-    high: 32,
-    icon: 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg',
-  },
-  tomorrow: {
-    low: 27,
-    high: 31,
-  },
-};
-// Change code below this line
+// Задача. Пользователь с почтой
+// Дополни функцию getUserWithEmail(users, email) так, чтобы она возвращала объект пользователя, почта которого (свойство email) совпадает со значением параметра email.
 
-// const highToday = forecast.today.high;
-// const lowToday = forecast.today.low;
-// const todayIcon = forecast.today.icon;
-
-// const highTomorrow = forecast.tomorrow.high;
-// const lowTomorrow = forecast.tomorrow.low;
-// const tomorrowIcon = forecast.tomorrow.icon;
-
-const {
-  today: {
-    low: lowToday, 
-    high: highToday, 
-    icon: todayIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+// Пиши код ниже этой строки
+// const getUserWithEmail = (users, email) => {
+   
+// };
+// Пиши код выше этой строки
+const users = [
+  {
+    name: 'Moore Hensley',
+    email: 'moorehensley@indexia.com',
+    eyeColor: 'blue',
+    friends: ['Sharron Pace'],
+    isActive: false,
+    balance: 2811,
+    gender: 'male'
   },
-  tomorrow: {
-    low: lowTomorrow,
-    high: highTomorrow,
-    icon: tomorrowIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg",
+  {
+    name: 'Sharlene Bush',
+    email: 'sharlenebush@tubesys.com',
+    eyeColor: 'blue',
+    friends: ['Briana Decker', 'Sharron Pace'],
+    isActive: true,
+    balance: 3821,
+    gender: 'female'
+  },
+  {
+    name: 'Ross Vazquez',
+    email: 'rossvazquez@xinware.com',
+    eyeColor: 'green',
+    friends: ['Marilyn Mcintosh', 'Padilla Garrison', 'Naomi Buckner'],
+    isActive: false,
+    balance: 3793,
+    gender: 'male'
+  },
+  {
+    name: 'Elma Head',
+    email: 'elmahead@omatom.com',
+    eyeColor: 'green',
+    friends: ['Goldie Gentry', 'Aisha Tran'],
+    isActive: true,
+    balance: 2278,
+    gender: 'female'
+  },
+  {
+    name: 'Carey Barr',
+    email: 'careybarr@nurali.com',
+    eyeColor: 'blue',
+    friends: ['Jordan Sampson', 'Eddie Strong'],
+    isActive: true,
+    balance: 3951,
+    gender: 'male'
+  },
+  {
+    name: 'Blackburn Dotson',
+    email: 'blackburndotson@furnigeer.com',
+    eyeColor: 'brown',
+    friends: ['Jacklyn Lucas', 'Linda Chapman'],
+    isActive: false,
+    balance: 1498,
+    gender: 'male'
+  },
+  {
+    name: 'Sheree Anthony',
+    email: 'shereeanthony@kog.com',
+    eyeColor: 'brown',
+    friends: ['Goldie Gentry', 'Briana Decker'],
+    isActive: true,
+    balance: 2764,
+    gender: 'female'
   }
-} = forecast;
+]
+// Пиши код ниже этой строки
+const getUserWithEmail = (users, email) => {
+   return users.find(user => user.email === email);
+};
+// Пиши код выше этой строки

@@ -1,11 +1,8 @@
-// Дополни метод removePotion(potionName) так, чтобы он удалял зелье potionName из массива зелий в свойстве potions.
+// Задача. Сортировка по количеству друзей
+// Дополни функцию sortByDescendingFriendCount(users) так, чтобы она возвращала массив пользователей отсортированный по убыванию количества их друзей (свойство friends).
 
-const atTheOldToad = {
-    potions: ["Speed potion", "Dragon breath", "Stone skin"],
-    removePotion(potionName) {
-      // Change code below this line
-       this.potions.splice(this.potions.indexOf(potionName), 1);
-     // Change code above this line
-    },
-  };
-  
+// Пиши код ниже этой строки
+const sortByDescendingFriendCount = users => {
+  return [...users].sort((firstUser, secondUser) => -firstUser.friends.length + secondUser.friends.length);
+};
+// Пиши код выше этой строки

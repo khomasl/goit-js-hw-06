@@ -1,9 +1,8 @@
-// Запиши в переменную keys массив ключей собственных свойств объекта apartment, а в переменную values массив всех значений его свойств. Используй методы Object.keys() и Object.values().
-const apartment = {
-    descr: "Spacious apartment in the city center",
-    rating: 4,
-    price: 2153,
-  };
-  // Change code below this line
-  const keys = Object.keys(apartment);
-  const values = Object.values(apartment);
+// Методы filter и find
+// Дополни код так, чтобы в переменной evenNumbers получился массив чётных чисел из массива numbers, а в переменной oddNumbers массив нечётных. Обязательно используй метод filter().
+
+const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
+// Пиши код ниже этой строки
+
+const evenNumbers = numbers.filter(number => (number % 2 === 0));
+const oddNumbers = numbers.filter(number => (number % 2 !== 0));

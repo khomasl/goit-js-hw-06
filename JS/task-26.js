@@ -1,26 +1,37 @@
-// Функция calculateMeanTemperature(forecast) принимает один параметр forecast - объект температур на два дня следующего формата.
-// {
-//   today: { low: 10, high: 20 },
-//   tomorrow: { low: 20, high: 30 }
-// }
-//Замени объявления переменных todayLow, todayHigh, tomorrowLow и tomorrowHigh одной операцией деструктуризации свойств объекта forecast.
-// Change code below this line
-function calculateMeanTemperature(forecast) {
-  // const todayLow = forecast.today.low;
-  // const todayHigh = forecast.today.high;
-  // const tomorrowLow = forecast.tomorrow.low;
-  // const tomorrowHigh = forecast.tomorrow.high;
-  const {
-    today: {
-      low: todayLow,
-      high: todayHigh
-    },
-    tomorrow: {
-      low: tomorrowLow,
-      high: tomorrowHigh
-    }
-  } = forecast;  
+// Метод every()
+// Используя метод every() дополни код так, чтобы:
 
-  // Change code above this line
-  return (todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4;
-}
+// В переменной eachElementInFirstIsEven был результат проверки всех элементов массива firstArray на чётность.
+// В переменной eachElementInFirstIsOdd был результат проверки всех элементов массива firstArray на нечётность.
+// В переменной eachElementInSecondIsEven был результат проверки всех элементов массива secondArray на чётность.
+// В переменной eachElementInSecondIsOdd был результат проверки всех элементов массива secondArray на нечётность.
+// В переменной eachElementInThirdIsEven был результат проверки всех элементов массива thirdArray на чётность.
+// В переменной eachElementInThirdIsOdd был результат проверки всех элементов массива thirdArray на нечётность.
+
+// const firstArray = [26, 94, 36, 18];
+// const secondArray = [17, 61, 23];
+// const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// // Пиши код ниже этой строки
+
+// const eachElementInFirstIsEven = firstArray;
+// const eachElementInFirstIsOdd = firstArray;
+
+// const eachElementInSecondIsEven = secondArray;
+// const eachElementInSecondIsOdd = secondArray;
+
+// const eachElementInThirdIsEven = thirdArray;
+// const eachElementInThirdIsOdd = thirdArray;
+
+const firstArray = [26, 94, 36, 18];
+const secondArray = [17, 61, 23];
+const thirdArray = [17, 26, 94, 61, 36, 23, 18];
+// Пиши код ниже этой строки
+
+const eachElementInFirstIsEven = firstArray.every(element => element % 2 === 0);
+const eachElementInFirstIsOdd = firstArray.every(element => element % 2 !== 0);
+
+const eachElementInSecondIsEven = secondArray.every(element => element % 2 === 0);
+const eachElementInSecondIsOdd = secondArray.every(element => element % 2 !== 0);
+
+const eachElementInThirdIsEven = thirdArray.every(element => element % 2 === 0);
+const eachElementInThirdIsOdd = thirdArray.every(element => element % 2 !== 0);

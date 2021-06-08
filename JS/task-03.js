@@ -1,20 +1,26 @@
-// Дополни код присвоив объявленным переменным выражения обращения к соответствующим свойствам обьекта apartment.
+// Задача. Общие элементы
+// Задание
+// Функция getCommonElements(firstArray, secondArray) принимает два массива произвольной длины в параметры firstArray и secondArray, и возвращает новый массив их общих элементов, то есть тех которые есть в обоих массивах.
 
-// aptRating - рейтинг;
-// aptDescr - описание;
-// aptPrice - цена;
-// aptTags - теги.
-const apartment = {
-  imgUrl: "https://via.placeholder.com/640x480",
-  descr: "Spacious apartment in the city center",
-  rating: 4,
-  price: 2153,
-  tags: ["premium", "promoted", "top"],
-};
+// Выполни рефакторинг функции так, чтобы вместо цикла for она использовала метод forEach.
 
-// Change code below this line
-const aptRating = apartment.rating;
-const aptDescr = apartment.descr;
-const aptPrice = apartment.price;
-const aptTags = apartment.tags;
-// Change code above this line
+function getCommonElements(firstArray, secondArray) {
+  const commonElements = [];
+  // Пиши код ниже этой строки
+
+  // for (let i = 0; i < firstArray.length; i += 1) {
+  //   if (secondArray.includes(firstArray[i])) {
+  //     commonElements.push(firstArray[i]);
+  //   }
+  // }
+
+  firstArray.forEach(element => {
+    if (secondArray.includes(element)) {
+      commonElements.push(element)
+    }
+  });
+  return commonElements;
+  // Пиши код выше этой строки
+}
+
+console.log(getCommonElements([1, 2, 3], [2, 4]));

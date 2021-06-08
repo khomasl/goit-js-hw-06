@@ -1,12 +1,43 @@
-// Напиши функцию countProps(object), которая считает и возвращает количество собственных свойств объекта в параметре object. Используй переменную propCount для хранения количества свойств объекта.
-function countProps(object) {
-  let propCount = 0;
-  // Change code below this line
-  for (const key in object) {
-    if (object.hasOwnProperty(key)) {
-      propCount += 1;
-    }
+// Метод flatMap()
+// Используя метод flatMap() сделай так, чтобы в переменной genres получился массив всех жанров книг (свойство genres) из массива книг books.
+
+// const books = [
+//   {
+//     title: 'Последнее королевство',
+//     author: 'Бернард Корнуэлл',
+//     genres: ['приключения', 'историческое']
+//   },
+//   {
+//     title: 'На берегу спокойных вод',
+//     author: 'Роберт Шекли',
+//     genres: ['фантастика']
+//   },
+//   {
+//     title: 'Красна как кровь',
+//     author: 'Ли Танит',
+//     genres: ['ужасы', 'мистика']
+//   }
+// ];
+// // Пиши код ниже этой строки
+
+// const genres = books;
+const books = [
+  {
+    title: 'Последнее королевство',
+    author: 'Бернард Корнуэлл',
+    genres: ['приключения', 'историческое']
+  },
+  {
+    title: 'На берегу спокойных вод',
+    author: 'Роберт Шекли',
+    genres: ['фантастика']
+  },
+  {
+    title: 'Красна как кровь',
+    author: 'Ли Танит',
+    genres: ['ужасы', 'мистика']
   }
-  // Change code above this line
-  return propCount;
-}
+];
+// Пиши код ниже этой строки
+
+const genres = books.flatMap(book => book.genres);
